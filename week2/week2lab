@@ -1,0 +1,44 @@
+--Making table query 1
+CREATE TABLE Animals_Types
+(animal_id integer,
+species varchar(25),
+habitat varchar(25),
+diet varchar(25)
+);
+Create table Animals
+(animalid integer,
+name varchar(25),
+species_id integer,
+age integer);
+
+
+
+query 2
+INSERT INTO Animals_Types (animal_id,species,habitat,diet)
+Values 
+(1,'lion','savanah','carnavor'),
+(2,'giraffe','savana','herbavor'),
+(3,'penguin','antartica','carnavor');
+
+
+
+
+query 3
+INSERT INTO Animals (animalid,name,species_id,age)
+Values 
+(1,'Simba',1,19),
+(2,'nelman',2,12),
+(3,'skipper',3,8);
+
+
+
+query 4
+select * FROM Animals
+select * FROM Animals_Types;
+The error you get with no comma is 
+ERROR:  syntax error at or near "name"
+LINE 1: INSERT INTO Animals (animalid name,species_id,age)
+                                      ^ 
+
+SQL state: 42601
+Character: 31
