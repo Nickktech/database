@@ -1,1 +1,29 @@
+--query 1
+CREATE DATABASE week2hmPracticeDB;
 
+--query 2
+CREATE TABLE Video_Games 
+(Name varchar(50),Devolpers varchar(50),Type_of_game varchar(25),cost numeric);
+
+--Query 3
+INSERT INTO Video_Games (Name,Devolpers,Type_of_game,cost)
+Values 
+('Fornite','Epic Games','Shooter',0000),
+('UFC 2026','EA Sports','MMA',62.99),
+('Fifa 2026','EA Sports','Sports',69.99);
+
+--Query 4
+Select * FROM Video_Games
+ORDER BY cost;
+
+--('Marvels Rivals','NetEase Games','Shooter','free';
+
+--ERROR:  syntax error at or near ")"
+--LINE 1: INSERT INTO Video_Games  (Name,Devolpers,Type_of_game,cost,)                                                      
+--SQL state: 42601
+--Character: 60
+
+--PART B 
+
+-- one new concept i noticed is using like and ilike , i feel like they would be very usefull in sqL
+-- one question i have is what is a snip ? Also couldnt disinct and where technically be use in the same way? 
