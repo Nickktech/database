@@ -17,32 +17,40 @@ VALUES
 ('The Whisper', '2026', 'drama','6.2'),
 ('2 Fast 2 Furious', '2003', 'Thriller','6.0');
 
+-- this query selects all from table 
 -- --Query 1
 -- SELECT * FROM Movies;
 
+-- this query selects just title from table 
 -- --Query 2
 -- SELECT title FROM Movies;
 
+--this query only selects ratings 
 -- --Query 3
 -- SELECT DISTINCT rating FROM Movies;
 
+--this query only selects ratings that are == to 7.9
 -- --Query 4
 -- SELECT rating FROM Movies 
 -- WHERE rating ='7.9';
 
+-- this query only selects movies that genre are action 
 -- --Query 5
 -- SELECT genre FROM Movies 
 -- WHERE genre = 'Action';
 
+-- this query orders all movies by thier rating 
 -- --Query 6
 -- SELECT * FROM Movies 
 -- ORDER BY rating
 
+-- this query selects movies that have ratings greater then 7 and sorts them alphbetical order by thier title 
 ----Query 7
 -- SELECT * FROM Movies
 -- WHERE rating >= 7.0
 -- ORDER BY title
 
+-- this query selects movies greater than 6 rating and realse year after 2008
 -- --Query 8
 -- SELECT * FROM Movies
 -- WHERE rating >= 6.0
