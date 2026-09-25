@@ -1,1 +1,52 @@
+Nicolas
+9/24/26
+CISW 217 C40A fall 2026/ DATABASE
+independent practice and data exploration
 
+create table product
+(index integer primary key,
+name text,
+description text,
+brand text,
+category varchar(50),
+price integer,
+currency text,
+stock integer,
+EAN text,
+color varchar(20),
+Size text,
+availblity varchar(50),
+INTERNAL_ID integer);
+
+
+
+
+-- select * from product
+
+-- query 1 total inventory value
+-- SELECT  SUM(price*stock) as total_inventory
+-- from product
+
+-- -- query 2
+-- select AVG(price) as average_price
+-- from product
+-- group by category
+
+-- -- query 3
+-- select * from product
+-- where price>500
+
+-- -- query 4
+-- select count(*)
+-- from product
+-- where category = 'skincare'
+
+-- -- query 5
+-- select * from product 
+-- order by price ASC
+
+
+
+--  part B Quick skim
+-- one new concept i noticed is join . there are many different ways to use it 
+-- one question i have is about null im not fully understanding how it could be useful or even how to use it 
