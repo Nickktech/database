@@ -1,1 +1,61 @@
 
+-- 1.Create table for import 
+-- create table products_big
+-- (index integer primary key,
+-- name text,
+-- description text,
+-- brand text,
+-- category varchar(50),
+-- price integer,
+-- currency text,
+-- stock integer,
+-- EAN text,
+-- color varchar(20),
+-- Size text,
+-- availblity varchar(50),
+-- INTERNAL_ID integer
+-- );
+
+-- 3. verify the load
+-- SELECT COUNT(*) FROM products_big; -- expect ~100,000
+-- SELECT * FROM products_big LIMIT 5; -- spot-check columns
+
+
+-- 4.baseline query
+-- EXPLAIN ANALYZE SELECT * FROM products_big WHERE category = 'Skincare';
+
+
+-- 5.create index and re-test
+-- CREATE INDEX idx_category
+-- ON products_big (category);
+
+-- EXPLAIN ANALYZE
+-- SELECT *
+-- FROM products_big
+-- WHERE category = 'Electronics';
+
+
+-- 6. compound index for selective queries
+-- CREATE INDEX idx_big_cat_price
+-- ON products_big(category, price);
+
+
+-- EXPLAIN ANALYZE
+-- SELECT *
+-- FROM products_big
+-- WHERE category = 'Electronics'
+
+
+
+-- 7. short reflection
+-- before i put the index query in sql would scan through the whole table to find find the data , after i put the index in , the index told sql to only search specific rows instead of searching the whole table.
+-- sql is smart and knows which search is going to be faster depending on the data. it knows which way is going to be more efficient
+-- with tables that have lots of data in them i noticed indexes were way better because searching thrtough the whole table takes a little logger while it will stilll get the job done its more efficient to make indexs on big tables or table that have potential to grow 
+
+
+
+ -- -- 8. 3 different datas - notes from homework
+ -- 1-1
+ -- 1-many
+ -- many-many
+-- -- 
